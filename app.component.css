@@ -1,0 +1,123 @@
+
+div.container {    
+    margin: 0 30% 0 30%;
+    height: 600px;
+    font-family: 'Courier New';    
+    overflow: hidden;
+}
+header {
+    background-color: rgb(25, 127, 158);
+    padding: 20px 0 0 20px;
+    height: 9%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+h1 {
+    color: rgba(255, 255, 255, 0.87);
+    margin: 0px;
+}
+div.content {
+    height: 86%;    
+    overflow: hidden;
+    border-left: 5px solid rgb(185, 183, 183);
+    border-right: 5px solid rgb(185, 183, 183);
+    border-bottom: 5px solid rgb(185, 183, 183);
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;    
+}
+nav {    
+    height: 8%;    
+    border-top: 5px solid rgb(185, 183, 183);
+    border-bottom: 5px solid rgb(185, 183, 183);
+}
+section {    
+    height: 90%;        
+    padding: 15px;
+    padding-top: 20px;   
+    overflow: scroll;             
+}
+
+/* Scrollbar Begin  */
+section::-webkit-scrollbar {
+    width: 10px;
+	background-color: #F5F5F5;
+}
+  
+section::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: linear-gradient(left, #fff, #e4e4e4);
+    border: 1px solid #aaa;
+}
+  
+section::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+}
+  
+section::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(left, #22ADD4, #1E98BA);
+}
+/* Scrollbar End */
+
+ul{
+    list-style:none;
+    padding:0;
+    margin:0;       
+}
+
+.listItem {
+    display: block;
+    border: 3px solid rgb(25, 127, 158);
+    border-radius: 15px;
+    margin-bottom: 25px;
+    padding: 10px 10px 10px 10px;
+}
+
+.name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.myBtn {
+    height: 25px;
+    background-color: transparent;
+    border: 1px solid rgb(25, 127, 158);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: small;
+    color: rgb(25, 127, 158);
+}
+
+.doneBtn {
+    width: 100%;     
+}
+
+.saveBtn {
+    margin-top: 15px;
+    width: 100%;
+}
+
+.navItem {
+    margin: 10px 0 0 10px;
+    width: 20%;
+    background-color: transparent;
+    border: 2px solid rgb(25, 127, 158);
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: small;
+    color: rgb(25, 127, 158);
+}
+
+.label {
+    margin: 20px 0 7px 5px;
+    font-weight: bold;
+}
+
+.toDoItemInput {
+    border: 1px solid grey;    
+    border-radius: 20px;
+    padding: 5px;
+    width: 45%;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,46 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class='container'>
+  <header>
+    <h1>TODO List</h1>
+  </header>
+  <div class='content'>
+    <!-- Navigationbar with the filters -->
+    <nav>
+      <button (click)="showTaskForm = false" class="navItem">Show Task</button>
+      <button (click)="showTaskForm = true" class="navItem">Create New Task</button>
+      <button (click)="filterDone = !filterDone" class="navItem">Only Show Done</button>
+      <select (change)="filterNames()" id="filter_names" class="myBtn navItem">
+        <option>Empty</option>
+        <option *ngFor="let person of people | async">{{person.name}}</option>
+      </select>
+    </nav>
+
+    <!-- Area where the items get displayed -->
+    <section>
+
+      <div [hidden]="!showTaskForm">
+        <div class="listItem">
+            <p class="label">AssignedTo:</p>
+            <input type="text" class="toDoItemInput" id="input_name"/> 
+            <p class="label">Description:</p>           
+            <input type="text" class="toDoItemInput" id="input_description"/>
+            <br>
+            <button (click)="save()" class="myBtn saveBtn">Save</button>
+        </div>        
+      </div>
+
+      <!-- ToDo Item List -->
+      <ul [hidden]="showTaskForm">
+        <li *ngFor="let toDoItem of todos">
+          <div *ngIf="filterByPerson(toDoItem.assignedTo) && filterByDone(toDoItem.done)" class="listItem" [style.border-color]="isDone(toDoItem.done) ? 'green' : 'red'">
+            <p class="name">{{toDoItem.assignedTo}}</p>
+            <p class="description">{{toDoItem.description}}</p>
+            <button class="myBtn doneBtn" (click)="setDone(toDoItem)">Set Done</button>
+          </div>
+        </li>
+      </ul>
+
+
+    </section>
+  </div>
+</div>
